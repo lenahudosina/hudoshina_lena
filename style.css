@@ -177,8 +177,8 @@ section{padding:96px 0;}
   background-size:cover;
   background-position:center;
 }
-.case-slide--betta .case-slide__media{border-radius:8px;}
-.case-slide--interior .case-slide__media{border-radius:17px;}
+.case-slide__media--betta{background-image:url("case-betta.jpg");border-radius:8px;}
+.case-slide__media--interior{background-image:url("case-yacht.jpg");border-radius:17px;}
 .case-slide__content{display:flex;flex-direction:column;gap:16px;}
 .case-slide__tag{
   font-size:13px;
