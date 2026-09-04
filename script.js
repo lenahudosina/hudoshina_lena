@@ -37,3 +37,29 @@ navMobile.querySelectorAll('a').forEach((a) => {
 
 // ---- год в футере ----
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ---- карусель кейсов: точки-пагинация ----
+const track = document.getElementById('cases-track');
+const dots = Array.from(document.querySelectorAll('#cases-dots .dot'));
+const slides = Array.from(track.querySelectorAll('.case-slide'));
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    slides[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+  });
+});
+
+const setActiveDot = () => {
+  const trackCenter = track.scrollLeft + track.clientWidth / 2;
+  let closest = 0;
+  let closestDist = Infinity;
+  slides.forEach((slide, i) => {
+    const dist = Math.abs((slide.offsetLeft + slide.offsetWidth / 2) - trackCenter);
+    if (dist < closestDist) { closestDist = dist; closest = i; }
+  });
+  dots.forEach((d, i) => d.classList.toggle('is-active', i === closest));
+};
+
+track.addEventListener('scroll', () => {
+  window.requestAnimationFrame(setActiveDot);
+});
