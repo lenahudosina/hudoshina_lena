@@ -45,26 +45,40 @@
 
   <section class="cases" id="cases">
     <div class="wrap">
-      <h2 class="section-title">Мои кейсы</h2>
-      <div class="cases__grid">
+      <h2 class="section-title section-title--underline">Мои кейсы</h2>
+    </div>
 
-        <article class="case-card">
-          <div class="case-card__media case-card__media--betta" aria-hidden="true"></div>
-          <p class="case-card__tag">Веб-дизайн · айдентика · AI-контент</p>
+    <div class="cases__track" id="cases-track">
+
+      <article class="case-slide">
+        <div class="case-slide__media case-slide__media--betta" aria-hidden="true"></div>
+        <div class="case-slide__content">
+          <p class="case-slide__tag">Веб-дизайн · айдентика · AI-контент</p>
           <h3>BETTA — центр лазерной косметологии</h3>
           <p>Редизайн визуальной и маркетинговой упаковки: маркетинговое исследование, фирменный стиль, AI-модель и фотосессия, сайт с прицелом на запись клиента.</p>
-          <a class="case-card__link" href="#contacts">Обсудить похожий проект →</a>
-        </article>
+          <a class="case-slide__link" href="#contacts">Смотреть кейс →</a>
+        </div>
+      </article>
 
-        <article class="case-card">
-          <div class="case-card__media case-card__media--interior" aria-hidden="true"></div>
-          <p class="case-card__tag">Веб-дизайн</p>
-          <h3>Редизайн сайта для дизайнера интерьеров</h3>
+      <article class="case-slide">
+        <div class="case-slide__media case-slide__media--interior" aria-hidden="true"></div>
+        <div class="case-slide__content">
+          <p class="case-slide__tag">Веб-дизайн</p>
+          <!-- ⚠️ в Figma заголовок и описание этой карточки не совпадают: заголовок про яхт-клуб, а текст — про дизайнера интерьеров. Оставила как в макете, поправь на то, что верно -->
+          <h3>Редизайн сайта для яхт клуба</h3>
           <p>Персональный сайт-портфолио: подать проекты дизайнера интерьеров так, чтобы клиент сразу считывал стиль и хотел обсудить свой.</p>
-          <a class="case-card__link" href="#contacts">Обсудить похожий проект →</a>
-        </article>
+          <a class="case-slide__link" href="#contacts">Смотреть кейс →</a>
+        </div>
+      </article>
 
+    </div>
+
+    <div class="wrap">
+      <div class="cases__dots" id="cases-dots">
+        <button class="dot is-active" aria-label="Кейс 1"></button>
+        <button class="dot" aria-label="Кейс 2"></button>
       </div>
+      <div class="hairline"></div>
     </div>
   </section>
 
